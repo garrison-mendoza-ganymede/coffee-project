@@ -38,12 +38,17 @@ function renderCoffees(coffees) {
 }
 
 
+
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
+    var selectedCoffees = coffeeSelection.value;
+    var coffeeName = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        } if (coffee.name === selectedCoffees) {
             filteredCoffees.push(coffee);
         }
     });
@@ -71,6 +76,7 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var coffeeSelection = document.querySelector("#search");
 
 tbody.innerHTML = renderCoffees(coffees);
 
