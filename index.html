@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Coffee!</h1>
-
+    <hr>
     <form id="myForm">
         <input id="search" type="text" >
         <label for="roast-selection"></label>
@@ -18,6 +18,18 @@
             <option>all</option>
         </select>
         <input id="submit" type="submit" />
+    </form>
+    <h3>Add a Coffee</h3>
+    <form id="myFormTwo">
+        <input id="addCoffee" type="text" >
+        <label for="roast-selection"></label>
+        <select id="roast-addition">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+            <option>all</option>
+        </select>
+        <input id="adding" onclick="pushData()" type="submit" />
     </form>
 
     <table>
