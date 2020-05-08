@@ -52,6 +52,18 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+document.getElementById('search').addEventListener("keyup", function () {
+
+// can you console log whats in text input
+// can you loop through coffees for each coffee does the name match whats been typed
+});
+
+// function autoComplete() {
+//     var x = document.getElementById("search").value;
+//     document.getElementById('myForm').innerHTML
+//         = x;
+//
+// }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -75,6 +87,8 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeSelection = document.querySelector("#search");
+
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
