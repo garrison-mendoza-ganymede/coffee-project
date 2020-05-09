@@ -88,10 +88,15 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark',  allRoast:'all'},
 ];
 // coffees.push.toString('#addCoffee');
-function pushData(){ 
-    var text= document.getElementById("addCoffee").value;  
-    coffees.push.bind(text);   
-    console.log(coffees.toString()); 
+// function pushData(){ 
+// //     var text = new Object (document.getElementById("addCoffee").value);  
+// //     coffees.push(typeof text);   
+// //     console.log(coffees.toString()); 
+// // }
+function coffeeAddition() {
+    var x = document.getElementById('myFormTwo');
+    x.push = document.getElementById("addCoffee").value;
+    coffees.push(x)
 }
 
 var tbody = document.querySelector('#coffees');
