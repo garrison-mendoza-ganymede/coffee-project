@@ -89,15 +89,17 @@ var coffees = [
 ];
 // coffees.push.toString('#addCoffee');
 // function pushData(){ 
-// //     var text = new Object (document.getElementById("addCoffee").value);  
-// //     coffees.push(typeof text);   
-// //     console.log(coffees.toString()); 
-// // }
+//     var text = new Object (document.getElementById("addCoffee").value);  
+//     coffees.push(typeof text);   
+//     console.log(coffees.toString()); 
+// }
 function coffeeAddition() {
-    var x = document.getElementById('myFormTwo');
-    x.push = document.getElementById("addCoffee").value;
-    coffees.push(x)
+    var x = document.getElementById('#addCoffee').value;
+    coffees.push(x);
+    console.log(coffees);
+    return renderCoffee();
 }
+
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
@@ -105,11 +107,14 @@ var roastSelection = document.querySelector('#roast-selection');
 var coffeeSelection = document.querySelector("#search");
 var search = document.querySelector("#search");
 var allRoast = document.querySelector('#roast-selection');
+var addButton = document.querySelector('#adding');
+var addCoffee = document.querySelector('#addCoffee');
 //adding var for adding roast
 // var roastAddition = document.querySelector('#roast-addition');
 
 
 tbody.innerHTML = renderCoffees(coffees);
+addButton.addEventListener('click', coffeeAddition);
 
 submitButton.addEventListener('click', updateCoffees);
 search.addEventListener('keyup', updateCoffees);
